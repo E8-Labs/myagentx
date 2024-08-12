@@ -105,7 +105,7 @@ const Page = () => {
                 "lastName": userLastName,
                 "email": userEmail,
                 "phone": phoneNumber,
-                "model": "tate"
+                "model": "tristan"
             });
 
             let config = {
@@ -143,11 +143,11 @@ const Page = () => {
                 <div className='2xl:flex hidden w-2/12 px-6 py-2 flex gap-4 flex-row items-center'
                     style={{ border: "2px solid #ffffff", borderRadius: 70 }}>
                     <div style={{ border: "2px solid black", borderRadius: "50%", padding: 4 }}>
-                        <Image src={"/assets/profile.png"} alt='profilephoto' height={40} width={40} style={{ resize: "cover" }} />
+                        <Image src={"https://cdn.prod.website-files.com/655154f819795897b29538c4/66b32d021219f0f3a7a9b8ed_418328626_1130563251267819_4738321637477825638_n-p-500.jpg"} alt='profilephoto' height={40} width={40} style={{ resize: "cover", borderRadius: '50%' }} />
                     </div>
                     <div className='flex flex-row gap-6'>
                         <div style={{ fontSize: 15, fontWeight: "400" }}>
-                            Tate.AI
+                            Tristan.AI
                         </div>
                         <button>
                             <Image
