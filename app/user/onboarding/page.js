@@ -105,13 +105,13 @@ const Page = () => {
                 "lastName": userLastName,
                 "email": userEmail,
                 "phone": phoneNumber,
-                "model": "1712788242190x897503015435501600"
+                // "model": "1712788242190x897503015435501600"
             });
 
             let config = {
                 method: 'post',
                 maxBodyLength: Infinity,
-                url: 'https://fine-tuner.ai/api/1.1/wf/v2_voice_agent_call',
+                url: 'https://www.blindcircle.com:444/voice/api/calls/make_a_call',
                 headers: {
                     'Content-Type': 'application/json',
                     'Authorization': 'Bearer 1716566901317x213622515056508930'
