@@ -48,7 +48,7 @@ const Page = () => {
     // Call function on small screens
     const smallScreenClick = useCallback(() => {
         setOpenBottomForm(true);
-        console.log('do not touch me');
+        // console.log('do not touch me');
     }, []);
 
     // Call function on larger screens
@@ -77,6 +77,11 @@ const Page = () => {
             handleLargeScreenClick();
         }
     };
+
+    const handleOpenLink = () => {
+        const linkAddress = 'https://www.youtube.com/';
+        window.open(linkAddress, '_blank')
+    }
 
     const style = {
         width: 300,
@@ -168,56 +173,60 @@ const Page = () => {
 
             {/*<Image src={"/assets/applogo.png"} height={400} width={400} /> Show when screen is larger than medium */}
             <div className='flex items-center justify-center flex-1 md:flex hidden'>
-                <motion.img
-                    src="/assets/applogo.png" // Ensure this path is correct
-                    alt="Animating Image"
-                    animate={{
-                        width: ["400px", "300px", "400px"],  // Keyframes for width
-                        height: ["400px", "300px", "400px"], // Keyframes for height
-                    }}
-                    transition={{
-                        duration: 10,
-                        repeat: Infinity,
-                        repeatType: "loop",
-                        ease: "easeInOut",
-                    }}
-                    style={{
-                        margin: "auto",
-                        display: "block",
-                        width: "400px", // Initial width
-                        height: "400px", // Initial height
-                    }}
-                />
+                <button onClick={handleClick}>
+                    <motion.img
+                        src="/assets/applogo.png" // Ensure this path is correct
+                        alt="Animating Image"
+                        animate={{
+                            width: ["400px", "300px", "400px"],  // Keyframes for width
+                            height: ["400px", "300px", "400px"], // Keyframes for height
+                        }}
+                        transition={{
+                            duration: 10,
+                            repeat: Infinity,
+                            repeatType: "loop",
+                            ease: "easeInOut",
+                        }}
+                        style={{
+                            margin: "auto",
+                            display: "block",
+                            width: "400px", // Initial width
+                            height: "400px", // Initial height
+                        }}
+                    />
+                </button>
             </div>
 
             {/* show when screen is medium size */}
             <div className='flex items-center justify-center flex-1 md:hidden'>
-                <motion.img
-                    src="/assets/applogo.png" // Ensure this path is correct
-                    alt="Animating Image"
-                    animate={{
-                        width: ["80vw", "60vw", "80vw"],  // Keyframes for width
-                        height: ["80vw", "60vw", "80vw"], // Keyframes for height
-                    }}
-                    transition={{
-                        duration: 10,
-                        repeat: Infinity,
-                        repeatType: "loop",
-                        ease: "easeInOut",
-                    }}
-                    style={{
-                        margin: "auto",
-                        display: "block",
-                        width: "50vw", // Initial width in viewport width units
-                        height: "50vw", // Initial height in viewport width units
-                        // maxWidth: "100%", // Ensures image doesn't exceed the container's width
-                        // maxHeight: "100%", // Ensures image doesn't exceed the container's height
-                    }}
-                />
+                <button onClick={handleClick}>
+                    <motion.img
+                        src="/assets/applogo.png" // Ensure this path is correct
+                        alt="Animating Image"
+                        animate={{
+                            width: ["80vw", "60vw", "80vw"],  // Keyframes for width
+                            height: ["80vw", "60vw", "80vw"], // Keyframes for height
+                        }}
+                        transition={{
+                            duration: 10,
+                            repeat: Infinity,
+                            repeatType: "loop",
+                            ease: "easeInOut",
+                        }}
+                        style={{
+                            margin: "auto",
+                            display: "block",
+                            width: "50vw", // Initial width in viewport width units
+                            height: "50vw", // Initial height in viewport width units
+                            // maxWidth: "100%", // Ensures image doesn't exceed the container's width
+                            // maxHeight: "100%", // Ensures image doesn't exceed the container's height
+                        }}
+                    />
+                </button>
             </div>
 
             <div className='flex items-end ms-8 mb-12 rounded' style={{ backgroundColor: "#620FEB66", width: "fit-content" }}>
-                <button className='flex flex-row p-4 items-center gap-6' onClick={handleClick}>
+                <button className='flex flex-row p-4 items-center gap-6' onClick={handleOpenLink}>
                     <div className='text-white' style={{ fontSize: 17, fontWeight: "600" }}>
                         Start calling
                     </div>
@@ -348,7 +357,7 @@ const Page = () => {
                 onClose={() => setOpenBottomForm(false)}
                 anchor='bottom'
                 BackdropProps={{
-                    sx:{
+                    sx: {
                         backgroundColor: "transparent",
                         backdropFilter: 'blur(20px)'
                     }
