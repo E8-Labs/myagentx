@@ -15,7 +15,7 @@ const PhoneNumberInput = ({ phonenumber }) => {
 
     return (
         <PhoneInput
-            country={''}
+            country={'us'}
             value={phone}
             onChange={(phone) => setPhone(phone)}
             inputStyle={{
