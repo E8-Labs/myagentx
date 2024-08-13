@@ -79,7 +79,7 @@ const Page = () => {
     };
 
     const handleOpenLink = () => {
-        const linkAddress = 'https://www.youtube.com/';
+        const linkAddress = 'https://form.jotform.com/noahdeveloperr/creatorX';
         window.open(linkAddress, '_blank')
     }
 
