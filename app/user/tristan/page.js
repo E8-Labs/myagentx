@@ -228,7 +228,7 @@ const Page = () => {
             <div className='flex items-end ms-8 mb-12 rounded' style={{ backgroundColor: "#620FEB66", width: "fit-content" }}>
                 <button className='flex flex-row p-4 items-center gap-6' onClick={handleOpenLink}>
                     <div className='text-white' style={{ fontSize: 17, fontWeight: "600" }}>
-                        Start calling
+                        Build Your Ai
                     </div>
                     <Image src={"/assets/phone.png"} alt='phone' height={20} width={20} />
                 </button>
